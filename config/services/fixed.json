@@ -1,0 +1,29 @@
+{
+  "container": {
+    "fixed": true
+  },
+  "parameters": {
+    "fixed": true
+  },
+  "library.services": {
+    "fixed": true
+  },
+  "factory.services": {
+    "fixed": true
+  },
+  "analyzer.config": {
+    "fixed": true
+  },
+  "compilator.spec.services": {
+    "fixed": true
+  },
+  "builder.workbench.services": {
+    "fixed": true
+  },
+  "analyzer.argument": {
+    "fixed": true
+  },
+  "builder.service": {
+    "fixed": true
+  }
+}
