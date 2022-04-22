@@ -9,17 +9,14 @@
             "email": "raphael.aurieres@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
-        "rorier/config": "^1.0",
+        "rorier/config": "^0.1",
+        "psr/container": "^2.0.0",
         "php": ">= 7.4"
-    },
-    "require-dev": {
-        "rorier/config": "*"
     },
     "autoload": {
         "psr-4": {
-            "ROrier\\Config\\": "src/"
+            "ROrier\\Services\\": "src/"
         }
     }
 }
