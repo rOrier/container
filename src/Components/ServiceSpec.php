@@ -4,6 +4,7 @@ namespace ROrier\Services\Components;
 
 use ArrayAccess;
 use Exception;
+use ROrier\Config\Components\Bag;
 
 class ServiceSpec implements ArrayAccess
 {
