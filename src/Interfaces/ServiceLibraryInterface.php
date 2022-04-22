@@ -39,9 +39,4 @@ interface ServiceLibraryInterface
      * @return bool
      */
     public function isFixed(string $name): bool;
-
-    /**
-     * @return CompilatorInterface|null
-     */
-    public function getCompilator(): ?CompilatorInterface;
 }
