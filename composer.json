@@ -1,0 +1,25 @@
+{
+    "name": "rorier/services",
+    "description": "Components to build and store services.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raphael Aurieres",
+            "email": "raphael.aurieres@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "rorier/config": "^1.0",
+        "php": ">= 7.4"
+    },
+    "require-dev": {
+        "rorier/config": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ROrier\\Config\\": "src/"
+        }
+    }
+}
