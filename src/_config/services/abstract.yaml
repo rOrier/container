@@ -1,0 +1,7 @@
+aggregator.abstract:
+  abstract: true
+  class: WorldFactory\\Registry\\Services\\Aggregator
+  arguments: ["@container"]
+  config:
+    prefix: null
+    interface: null

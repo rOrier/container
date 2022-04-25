@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "rorier/config": "^0.1",
+        "rorier/config": "^0.2",
         "psr/container": "^2.0.0",
         "php": ">= 7.4"
     },
