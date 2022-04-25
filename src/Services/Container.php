@@ -1,11 +1,11 @@
 <?php
 
-namespace ROrier\Services\Services;
+namespace ROrier\Container\Services;
 
-use ROrier\Services\Exceptions\ContainerException;
-use ROrier\Services\Interfaces\ContainerInterface;
-use ROrier\Services\Interfaces\ServiceFactoryInterface;
-use ROrier\Services\Interfaces\ServiceLibraryInterface;
+use ROrier\Container\Exceptions\ContainerException;
+use ROrier\Container\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ServiceFactoryInterface;
+use ROrier\Container\Interfaces\ServiceLibraryInterface;
 
 /**
  * Class Container

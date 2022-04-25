@@ -1,14 +1,14 @@
 <?php
 
-namespace ROrier\Services\Services;
+namespace ROrier\Container\Services;
 
 use ArrayAccess;
 use Iterator;
 use Exception;
 use LogicException;
-use ROrier\Services\Interfaces\ContainerInterface;
-use ROrier\Services\Interfaces\Services\ConfigurableServiceInterface;
-use ROrier\Services\Traits\ConfigurableServiceTrait;
+use ROrier\Container\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\Services\ConfigurableServiceInterface;
+use ROrier\Container\Traits\ConfigurableServiceTrait;
 
 /**
  * Class Aggregator

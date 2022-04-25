@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Interfaces;
+namespace ROrier\Container\Interfaces;
 
-use ROrier\Services\Components\ServiceDraft;
-use ROrier\Services\Components\ServiceSpec;
+use ROrier\Container\Components\ServiceDraft;
+use ROrier\Container\Components\ServiceSpec;
 
 interface ServiceBuilderModuleInterface
 {

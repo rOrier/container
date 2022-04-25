@@ -1,13 +1,13 @@
 <?php
 
-namespace ROrier\Services\Components\Bootstraps;
+namespace ROrier\Container\Components\Bootstraps;
 
 use Exception;
 use ROrier\Config\Tools\CollectionTool;
-use ROrier\Services\Services\ServiceSpecCompilers\FactoryCompiler;
-use ROrier\Services\Services\ServiceSpecCompilers\InheritanceCompiler;
-use ROrier\Services\Services\Compilator;
-use ROrier\Services\Services\Libraries\ServiceLibrary;
+use ROrier\Container\Services\ServiceSpecCompilers\FactoryCompiler;
+use ROrier\Container\Services\ServiceSpecCompilers\InheritanceCompiler;
+use ROrier\Container\Services\Compilator;
+use ROrier\Container\Services\Libraries\ServiceLibrary;
 
 class LibraryBootstrap
 {

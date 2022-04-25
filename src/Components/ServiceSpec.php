@@ -1,6 +1,6 @@
 <?php
 
-namespace ROrier\Services\Components;
+namespace ROrier\Container\Components;
 
 use ArrayAccess;
 use Exception;

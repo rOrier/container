@@ -1,10 +1,10 @@
 <?php
 
-namespace ROrier\Services\Components;
+namespace ROrier\Container\Components;
 
 use Psr\Container\ContainerInterface;
 use ROrier\Config\Interfaces\AnalyzerInterface;
-use ROrier\Services\Interfaces\ServiceCallDelayerInterface;
+use ROrier\Container\Interfaces\ServiceCallDelayerInterface;
 use Exception;
 use LogicException;
 

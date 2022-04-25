@@ -1,6 +1,6 @@
 <?php
 
-namespace ROrier\Services\Interfaces;
+namespace ROrier\Container\Interfaces;
 
 interface ServiceCallDelayerInterface
 {

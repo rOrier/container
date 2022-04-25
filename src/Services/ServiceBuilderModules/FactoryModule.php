@@ -1,15 +1,15 @@
 <?php
 
-namespace ROrier\Services\Services\ServiceBuilderModules;
+namespace ROrier\Container\Services\ServiceBuilderModules;
 
 use ROrier\Config\Exceptions\ConfigurationException;
 use ROrier\Config\Interfaces\AnalyzerInterface;
-use ROrier\Services\Interfaces\ServiceBuilderModuleInterface;
-use ROrier\Services\Components\ServiceDraft;
-use ROrier\Services\Components\ServiceSpec;
-use ROrier\Services\Exceptions\ContainerException;
+use ROrier\Container\Interfaces\ServiceBuilderModuleInterface;
+use ROrier\Container\Components\ServiceDraft;
+use ROrier\Container\Components\ServiceSpec;
+use ROrier\Container\Exceptions\ContainerException;
 use ROrier\Config\Foundations\AbstractParsingException;
-use ROrier\Services\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ContainerInterface;
 
 class FactoryModule implements ServiceBuilderModuleInterface
 {

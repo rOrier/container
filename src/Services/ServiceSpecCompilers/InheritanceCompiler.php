@@ -1,10 +1,10 @@
 <?php
 
-namespace ROrier\Services\Services\ServiceSpecCompilers;
+namespace ROrier\Container\Services\ServiceSpecCompilers;
 
 use ROrier\Config\Exceptions\ConfigurationException;
 use ROrier\Config\Tools\CollectionTool;
-use ROrier\Services\Interfaces\CompilerInterface;
+use ROrier\Container\Interfaces\CompilerInterface;
 
 class InheritanceCompiler implements CompilerInterface
 {

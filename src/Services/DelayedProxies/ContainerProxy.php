@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Services\DelayedProxies;
+namespace ROrier\Container\Services\DelayedProxies;
 
-use ROrier\Services\Exceptions\ContainerException;
-use ROrier\Services\Interfaces\ContainerInterface;
+use ROrier\Container\Exceptions\ContainerException;
+use ROrier\Container\Interfaces\ContainerInterface;
 
 /**
  * Class ContainerProxy

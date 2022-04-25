@@ -1,11 +1,11 @@
 <?php
 
-namespace ROrier\Services\Services\Libraries;
+namespace ROrier\Container\Services\Libraries;
 
-use ROrier\Services\Components\ServiceSpec;
+use ROrier\Container\Components\ServiceSpec;
 use ROrier\Config\Exceptions\ConfigurationException;
-use ROrier\Services\Interfaces\CompilatorInterface;
-use ROrier\Services\Interfaces\ServiceLibraryInterface;
+use ROrier\Container\Interfaces\CompilatorInterface;
+use ROrier\Container\Interfaces\ServiceLibraryInterface;
 
 /**
  * Class ServiceLibrary

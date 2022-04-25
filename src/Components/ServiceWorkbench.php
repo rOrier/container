@@ -1,11 +1,11 @@
 <?php
 
-namespace ROrier\Services\Components;
+namespace ROrier\Container\Components;
 
 use Exception;
-use ROrier\Services\Interfaces\ServiceCallDelayerInterface;
-use ROrier\Services\Interfaces\ServiceWorkbenchInterface;
-use ROrier\Services\Interfaces\ServiceBuilderInterface;
+use ROrier\Container\Interfaces\ServiceCallDelayerInterface;
+use ROrier\Container\Interfaces\ServiceWorkbenchInterface;
+use ROrier\Container\Interfaces\ServiceBuilderInterface;
 
 class ServiceWorkbench implements ServiceWorkbenchInterface
 {

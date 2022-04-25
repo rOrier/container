@@ -1,11 +1,11 @@
 <?php
 
-namespace ROrier\Services\Services\ServiceBuilderModules;
+namespace ROrier\Container\Services\ServiceBuilderModules;
 
-use ROrier\Services\Components\ServiceDraft;
-use ROrier\Services\Components\ServiceSpec;
+use ROrier\Container\Components\ServiceDraft;
+use ROrier\Container\Components\ServiceSpec;
 use ROrier\Config\Exceptions\ConfigurationException;
-use ROrier\Services\Interfaces\ServiceBuilderModuleInterface;
+use ROrier\Container\Interfaces\ServiceBuilderModuleInterface;
 
 class CallsModule implements ServiceBuilderModuleInterface
 {

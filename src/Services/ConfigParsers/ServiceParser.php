@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Services\ConfigParsers;
+namespace ROrier\Container\Services\ConfigParsers;
 
 use ROrier\Config\Interfaces\ParserInterface;
-use ROrier\Services\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ContainerInterface;
 
 class ServiceParser implements ParserInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace ROrier\Services\Interfaces;
+namespace ROrier\Container\Interfaces;
 
-use ROrier\Services\Components\ServiceSpec;
+use ROrier\Container\Components\ServiceSpec;
 
 interface CompilatorInterface
 {

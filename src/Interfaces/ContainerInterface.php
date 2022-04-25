@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Interfaces;
+namespace ROrier\Container\Interfaces;
 
 use Psr\Container\ContainerInterface as PSRContainerInterface;
-use ROrier\Services\Exceptions\ContainerException;
+use ROrier\Container\Exceptions\ContainerException;
 
 /**
  * Interface ParametersInterface

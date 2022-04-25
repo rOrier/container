@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Traits;
+namespace ROrier\Container\Traits;
 
 use ROrier\Config\Components\Bag;
-use ROrier\Services\Interfaces\Services\ConfigurableServiceInterface;
+use ROrier\Container\Interfaces\Services\ConfigurableServiceInterface;
 
 trait ConfigurableServiceTrait
 {

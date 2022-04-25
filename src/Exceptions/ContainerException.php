@@ -1,6 +1,6 @@
 <?php
 
-namespace ROrier\Services\Exceptions;
+namespace ROrier\Container\Exceptions;
 
 use Exception;
 use Psr\Container\ContainerExceptionInterface;

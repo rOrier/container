@@ -1,15 +1,15 @@
 <?php
 
-namespace ROrier\Services\Services\Factories;
+namespace ROrier\Container\Services\Factories;
 
 use Exception;
 use LogicException;
-use ROrier\Services\Exceptions\ContainerException;
-use ROrier\Services\Interfaces\ContainerInterface;
-use ROrier\Services\Interfaces\ServiceFactoryInterface;
-use ROrier\Services\Interfaces\ServiceLibraryInterface;
-use ROrier\Services\Interfaces\ServiceWorkbenchBuilderInterface;
-use ROrier\Services\Interfaces\ServiceWorkbenchInterface;
+use ROrier\Container\Exceptions\ContainerException;
+use ROrier\Container\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ServiceFactoryInterface;
+use ROrier\Container\Interfaces\ServiceLibraryInterface;
+use ROrier\Container\Interfaces\ServiceWorkbenchBuilderInterface;
+use ROrier\Container\Interfaces\ServiceWorkbenchInterface;
 
 /**
  * Class ServiceFactory
@@ -82,7 +82,7 @@ class ServiceFactory implements ServiceFactoryInterface
             return $service;
         } catch (Exception $exception) {
             $this->cleaning();
-            throw new ContainerException("Error during building service '$name'.", 0, $exception);
+            throw new ContainerException("Error during building service '$name' : " . $exception->getMessage(), $exception->getCode(), $exception);
         }
     }
 

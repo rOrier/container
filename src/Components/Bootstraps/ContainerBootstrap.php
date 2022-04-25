@@ -1,26 +1,26 @@
 <?php
 
-namespace ROrier\Services\Components\Bootstraps;
+namespace ROrier\Container\Components\Bootstraps;
 
 use Exception;
 use ROrier\Config\Interfaces\ParametersInterface;
-use ROrier\Services\Interfaces\ServiceLibraryInterface;
-use ROrier\Services\Services\Container;
+use ROrier\Container\Interfaces\ServiceLibraryInterface;
+use ROrier\Container\Services\Container;
 use ROrier\Config\Services\Analyzer;
-use ROrier\Services\Services\DelayedProxies\ContainerProxy;
+use ROrier\Container\Services\DelayedProxies\ContainerProxy;
 use ROrier\Config\Services\ConfigParsers\ArrayParameterParser;
 use ROrier\Config\Services\ConfigParsers\ConstantParser;
 use ROrier\Config\Services\ConfigParsers\EnvParser;
-use ROrier\Services\Services\ConfigParsers\ServiceParser;
+use ROrier\Container\Services\ConfigParsers\ServiceParser;
 use ROrier\Config\Services\ConfigParsers\StringParameterParser;
-use ROrier\Services\Services\ServiceBuilderModules\CallsModule;
-use ROrier\Services\Services\ServiceBuilderModules\CatchModule;
-use ROrier\Services\Services\ServiceBuilderModules\ConfigModule;
-use ROrier\Services\Services\ServiceBuilderModules\ConstructorModule;
-use ROrier\Services\Services\ServiceBuilderModules\FactoryModule;
-use ROrier\Services\Services\Factories\ServiceFactory;
-use ROrier\Services\Services\Builders\ServiceWorkbenchBuilder;
-use ROrier\Services\Services\Builders\ServiceBuilder;
+use ROrier\Container\Services\ServiceBuilderModules\CallsModule;
+use ROrier\Container\Services\ServiceBuilderModules\CatchModule;
+use ROrier\Container\Services\ServiceBuilderModules\ConfigModule;
+use ROrier\Container\Services\ServiceBuilderModules\ConstructorModule;
+use ROrier\Container\Services\ServiceBuilderModules\FactoryModule;
+use ROrier\Container\Services\Factories\ServiceFactory;
+use ROrier\Container\Services\Builders\ServiceWorkbenchBuilder;
+use ROrier\Container\Services\Builders\ServiceBuilder;
 
 class ContainerBootstrap
 {

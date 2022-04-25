@@ -1,6 +1,6 @@
 <?php
 
-namespace ROrier\Services\Interfaces\Services;
+namespace ROrier\Container\Interfaces\Services;
 
 /**
  * Interface ConfigurableServiceInterface

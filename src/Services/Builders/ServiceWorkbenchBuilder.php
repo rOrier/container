@@ -1,14 +1,14 @@
 <?php
 
-namespace ROrier\Services\Services\Builders;
+namespace ROrier\Container\Services\Builders;
 
 use ROrier\Config\Interfaces\AnalyzerInterface;
-use ROrier\Services\Components\ServiceCallDelayer;
-use ROrier\Services\Components\ServiceWorkbench;
-use ROrier\Services\Interfaces\ContainerInterface;
-use ROrier\Services\Interfaces\ServiceWorkbenchBuilderInterface;
-use ROrier\Services\Interfaces\ServiceWorkbenchInterface;
-use ROrier\Services\Interfaces\ServiceBuilderInterface;
+use ROrier\Container\Components\ServiceCallDelayer;
+use ROrier\Container\Components\ServiceWorkbench;
+use ROrier\Container\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ServiceWorkbenchBuilderInterface;
+use ROrier\Container\Interfaces\ServiceWorkbenchInterface;
+use ROrier\Container\Interfaces\ServiceBuilderInterface;
 
 class ServiceWorkbenchBuilder implements ServiceWorkbenchBuilderInterface
 {

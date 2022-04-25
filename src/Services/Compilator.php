@@ -1,9 +1,9 @@
 <?php
 
-namespace ROrier\Services\Services;
+namespace ROrier\Container\Services;
 
-use ROrier\Services\Interfaces\CompilatorInterface;
-use ROrier\Services\Interfaces\CompilerInterface;
+use ROrier\Container\Interfaces\CompilatorInterface;
+use ROrier\Container\Interfaces\CompilerInterface;
 
 /**
  * Class Compilator

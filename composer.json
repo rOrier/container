@@ -1,5 +1,5 @@
 {
-    "name": "rorier/services",
+    "name": "rorier/container",
     "description": "Components to build and store services.",
     "type": "library",
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ROrier\\Services\\": "src/"
+            "ROrier\\Container\\": "src/"
         }
     }
 }
