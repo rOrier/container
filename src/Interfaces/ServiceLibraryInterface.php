@@ -39,4 +39,10 @@ interface ServiceLibraryInterface
      * @return bool
      */
     public function isFixed(string $name): bool;
+
+    /**
+     * @param string $name
+     * @return array
+     */
+    public function getFixedServices(): array;
 }

@@ -124,4 +124,21 @@ class ServiceLibrary implements ServiceLibraryInterface
     {
         return $this->getSpec($name)->isFixed();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getFixedServices(): array
+    {
+        $names = array();
+
+        /** @var ServiceSpec $spec */
+        foreach ($this->specs as $spec) {
+            if ($spec['fixed']) {
+                $names[] = $spec->getName();
+            }
+        }
+
+        return $names;
+    }
 }
