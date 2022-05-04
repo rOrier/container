@@ -9,7 +9,7 @@ trait ConfigurableServiceTrait
 {
     protected Bag $config;
 
-    public function __construct()
+    protected function initConfigurableService()
     {
         $this->config = new Bag();
     }
