@@ -15,9 +15,7 @@ use ROrier\Container\Traits\ConfigurableServiceTrait;
  */
 class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator
 {
-    use ConfigurableServiceTrait {
-        ConfigurableServiceTrait::__construct as private configurableServiceConstruct;
-    }
+    use ConfigurableServiceTrait;
 
     /** @var ContainerInterface */
     private ContainerInterface $container;
@@ -28,7 +26,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator
     {
         $this->container = $container;
 
-        $this->configurableServiceConstruct();
+        $this->initConfigurableService();
     }
 
     /**
