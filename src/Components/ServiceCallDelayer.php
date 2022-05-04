@@ -104,7 +104,7 @@ class ServiceCallDelayer implements ServiceCallDelayerInterface
                 throw new LogicException($message);
             }
 
-            $arguments[] = $this->analyzer->parse($delayedCall['arguments']);
+            $arguments = $this->analyzer->parse($delayedCall['arguments']);
         }
 
         call_user_func_array(array($service, $method), $arguments);
