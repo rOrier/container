@@ -76,7 +76,7 @@ class CatchModule implements ServiceBuilderModuleInterface
         $findedTags = $this->library->getTaggedServices($catch['tag']);
 
         foreach ($findedTags as $findedTag) {
-            $argument = $built ? '@' . $findedTag['name'] : $findedTag['name'];
+            $argument = $built ? '@' . $findedTag['service'] : $findedTag['service'];
             $arguments = array_merge(array($argument), $findedTag['options']);
 
             $draft->addCall($catch['method'], $arguments);
