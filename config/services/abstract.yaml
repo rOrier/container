@@ -1,6 +1,6 @@
 aggregator.abstract:
   abstract: true
-  class: WorldFactory\\Registry\\Services\\Aggregator
+  class: ROrier\Container\Services\Aggregator
   arguments: ["@container"]
   config:
     prefix: null
