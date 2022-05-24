@@ -36,7 +36,7 @@ class CallsModule implements ServiceBuilderModuleInterface
             );
 
             $method = $call['method'];
-            $arguments = array_key_exists('arguments', $call) ? $call['method'] : [];
+            $arguments = array_key_exists('arguments', $call) ? $call['arguments'] : [];
 
             $draft->addCall($method, $arguments);
         }
