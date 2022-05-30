@@ -2,6 +2,7 @@
 
 namespace ROrier\Container\Services\ServiceBuilderModules;
 
+use ROrier\Config\Tools\CollectionTool;
 use ROrier\Container\Components\ServiceDraft;
 use ROrier\Container\Components\ServiceSpec;
 use ROrier\Config\Exceptions\ConfigurationException;
@@ -45,7 +46,7 @@ class CatchModule implements ServiceBuilderModuleInterface
     {
         $catch = $spec['catch'];
 
-        if (!is_array($catch)) {
+        if (!is_array($catch) || CollectionTool::isSequential($catch)) {
             $catch = array(
                 'tag' => $catch,
                 'method' => 'addServiceName',
