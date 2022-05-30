@@ -74,6 +74,12 @@ class ServiceSpec implements ArrayAccess
 
         if ($this->data['tags']) {
             foreach($this->data['tags'] as $tag) {
+                if (!is_array($tag)) {
+                    $tag = [
+                        'name' => $tag
+                    ];
+                }
+
                 if ($tag['name'] === $name) {
                     $validTags[] = array(
                         'service' => $this->getName(),
