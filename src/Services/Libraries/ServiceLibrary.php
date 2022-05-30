@@ -74,14 +74,19 @@ class ServiceLibrary implements ServiceLibraryInterface
     /**
      * @inheritDoc
      */
-    public function getTaggedServices(string $name): array
+    public function getTaggedServices($names): array
     {
         $tags = array();
 
-        /** @var ServiceSpec $spec */
-        foreach ($this->specs as $spec) {
-            if (!$spec->isAbstract()) {
-                $tags = array_merge($tags, $spec->getTagDefinitions($name));
+        if (!is_array($names)) {
+            $names = [$names];
+        }
+
+        foreach ($names as $name) {
+            foreach ($this->specs as $spec) {
+                if (!$spec->isAbstract()) {
+                    $tags = array_merge($tags, $spec->getTagDefinitions($name));
+                }
             }
         }
 

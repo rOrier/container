@@ -29,10 +29,10 @@ interface ServiceLibraryInterface
     public function exists($name): bool;
 
     /**
-     * @param string $name
+     * @param string|array $names
      * @return array
      */
-    public function getTaggedServices(string $name): array;
+    public function getTaggedServices($names): array;
 
     /**
      * @param string $name
