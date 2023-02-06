@@ -3,6 +3,7 @@
 namespace ROrier\Container\Services;
 
 use ArrayAccess;
+use Countable;
 use Iterator;
 use Exception;
 use LogicException;
@@ -13,7 +14,7 @@ use ROrier\Container\Traits\ConfigurableServiceTrait;
 /**
  * Class Aggregator
  */
-class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator
+class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator, Countable
 {
     use ConfigurableServiceTrait;
 
@@ -165,5 +166,10 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator
     public function offsetUnset($offset)
     {
         throw new LogicException("Trying to unset aggregator $offset.");
+    }
+
+    public function count()
+    {
+        return count($this->index);
     }
 }
