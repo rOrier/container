@@ -49,7 +49,7 @@ class Container implements ContainerInterface
     /**
      * @inheritDoc
      */
-    public function has(string $id) : bool
+    public function has(string $id)
     {
         return $this->library->exists($id);
     }
