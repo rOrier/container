@@ -26,8 +26,6 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-
-        $this->initConfigurableService();
     }
 
     /**
