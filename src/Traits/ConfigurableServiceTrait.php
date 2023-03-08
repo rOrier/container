@@ -14,6 +14,13 @@ trait ConfigurableServiceTrait
         $this->config = new Bag();
     }
 
+    protected function initConfigBag()
+    {
+        if (!isset($this->config)) {
+            $this->config = new Bag();
+        }
+    }
+
     /**
      * @inheritDoc
      */
@@ -29,6 +36,8 @@ trait ConfigurableServiceTrait
      */
     public function addConfig(array $config): ConfigurableServiceInterface
     {
+        $this->initConfigBag();
+
         $this->config->merge($config);
 
         return $this;
@@ -39,6 +48,8 @@ trait ConfigurableServiceTrait
      */
     public function hasConfig(string $key): bool
     {
+        $this->initConfigBag();
+
         return isset($this->config[$key]);
     }
 
@@ -47,6 +58,8 @@ trait ConfigurableServiceTrait
      */
     public function getConfig(string $key)
     {
+        $this->initConfigBag();
+
         return $this->config[$key];
     }
 }
