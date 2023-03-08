@@ -39,8 +39,8 @@ class ConfigModule implements ServiceBuilderModuleInterface
         $spec = $draft->getSpec();
         $service = $draft->getService();
 
-        if (($draft->getService() instanceof ConfigurableServiceInterface) && $spec['config']) {
-            $config = $this->analyzer->parse($spec['config']);
+        if ($draft->getService() instanceof ConfigurableServiceInterface) {
+            $config = $spec['config'] ? $this->analyzer->parse($spec['config']) : [];
             $service->setConfig($config);
         }
     }
