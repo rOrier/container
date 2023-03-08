@@ -11,7 +11,7 @@ trait ConfigurableServiceTrait
 
     protected function initConfigurableService()
     {
-        $this->config = new Bag();
+        trigger_error('Method ConfigurableServiceTrait::initConfigurableService is deprecated.', E_USER_DEPRECATED);
     }
 
     protected function initConfigBag()
