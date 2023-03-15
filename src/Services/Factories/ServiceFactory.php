@@ -22,7 +22,8 @@ class ServiceFactory implements ServiceFactoryInterface
 
     private ServiceWorkbenchBuilderInterface $workbenchBuilder;
 
-    private ?ServiceWorkbenchInterface $workbench = null;
+    /** @var ServiceWorkbenchInterface[] */
+    private array $workbench = [];
 
     /**
      * ServiceFactory constructor.
@@ -52,13 +53,21 @@ class ServiceFactory implements ServiceFactoryInterface
      * @inheritDoc
      * @throws Exception
      */
-    public function build(string $name): object
+    public function build(string $name, bool $prioritary = false): object
     {
-        if ($this->workbench !== null) {
-            return $this->buildService($name);
-        } else {
+        if (empty($this->workbench) || $prioritary) {
             return $this->buildServiceChain($name);
+        } else {
+            return $this->buildService($name);
         }
+    }
+
+    /**
+     * @return ServiceWorkbenchInterface
+     */
+    public function getWorkbench(): object
+    {
+        return end($this->workbench);
     }
 
     /**
@@ -69,13 +78,13 @@ class ServiceFactory implements ServiceFactoryInterface
     protected function buildServiceChain(string $name): object
     {
         try {
-            $this->workbench = $this->workbenchBuilder->build();
+            $this->workbench[] = $this->workbenchBuilder->build();
 
-            $this->workbench->preProcess();
+            $this->getWorkbench()->preProcess();
 
             $service = $this->buildService($name);
 
-            $this->workbench->postProcess();
+            $this->getWorkbench()->postProcess();
 
             $this->cleaning();
 
@@ -88,7 +97,7 @@ class ServiceFactory implements ServiceFactoryInterface
 
     protected function cleaning()
     {
-        $this->workbench = null;
+        array_pop($this->workbench);
     }
 
     /**
@@ -110,7 +119,7 @@ class ServiceFactory implements ServiceFactoryInterface
         try {
             $spec = $this->library->getSpec($name);
 
-            $service = $this->workbench->build($spec);
+            $service = $this->getWorkbench()->build($spec);
 
             if ($spec->isShared()) {
                 $this->container->setService($name, $service);
