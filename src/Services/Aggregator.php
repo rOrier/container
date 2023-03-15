@@ -92,6 +92,17 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
         return array_keys($this->index);
     }
 
+    public function toArray(): array
+    {
+        $array = [];
+
+        foreach($this->getNames() as $name) {
+            $array[$name] = $this->getService($name);
+        }
+
+        return $array;
+    }
+
     /**
      * @inheritDoc
      * @throws Exception
