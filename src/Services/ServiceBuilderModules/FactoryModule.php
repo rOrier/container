@@ -10,6 +10,7 @@ use ROrier\Container\Components\ServiceSpec;
 use ROrier\Container\Exceptions\ContainerException;
 use ROrier\Config\Foundations\AbstractParsingException;
 use ROrier\Container\Interfaces\ContainerInterface;
+use ROrier\Container\Interfaces\ServiceFactoryInterface;
 
 class FactoryModule implements ServiceBuilderModuleInterface
 {
@@ -87,8 +88,24 @@ class FactoryModule implements ServiceBuilderModuleInterface
         );
 
         return [
-            $this->container->get($spec['factory.service']),
+            $this->getFactory($spec['factory.service']),
             $spec['factory.method']
         ];
+    }
+
+    protected function getFactory(string $name): object
+    {
+        if ($this->container->exists($name)) {
+            $factory = $this->container
+                ->get($name)
+            ;
+        } else {
+            $factory = $this->container
+                ->get('factory.services')
+                ->build($name, true)
+            ;
+        }
+
+        return $factory;
     }
 }
