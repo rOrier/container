@@ -62,4 +62,14 @@ trait ConfigurableServiceTrait
 
         return $this->config[$key];
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function exportConfig()
+    {
+        $this->initConfigBagIfNeeded();
+
+        return $this->config->toArray();
+    }
 }

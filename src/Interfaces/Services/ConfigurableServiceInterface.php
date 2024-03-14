@@ -31,4 +31,9 @@ interface ConfigurableServiceInterface
      * @return bool
      */
     public function hasConfig(string $key): bool;
+
+    /**
+     * @return array
+     */
+    public function exportConfig(): array;
 }
