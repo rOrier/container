@@ -14,7 +14,7 @@ trait ConfigurableServiceTrait
         trigger_error('Method ConfigurableServiceTrait::initConfigurableService is deprecated.', E_USER_DEPRECATED);
     }
 
-    protected function initConfigBag()
+    protected function initConfigBagIfNeeded()
     {
         if (!isset($this->config)) {
             $this->config = new Bag();
@@ -36,7 +36,7 @@ trait ConfigurableServiceTrait
      */
     public function addConfig(array $config): ConfigurableServiceInterface
     {
-        $this->initConfigBag();
+        $this->initConfigBagIfNeeded();
 
         $this->config->merge($config);
 
@@ -48,7 +48,7 @@ trait ConfigurableServiceTrait
      */
     public function hasConfig(string $key): bool
     {
-        $this->initConfigBag();
+        $this->initConfigBagIfNeeded();
 
         return isset($this->config[$key]);
     }
@@ -58,7 +58,7 @@ trait ConfigurableServiceTrait
      */
     public function getConfig(string $key)
     {
-        $this->initConfigBag();
+        $this->initConfigBagIfNeeded();
 
         return $this->config[$key];
     }
