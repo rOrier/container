@@ -66,7 +66,7 @@ trait ConfigurableServiceTrait
     /**
      * @inheritDoc
      */
-    public function exportConfig()
+    public function exportConfig(): array
     {
         $this->initConfigBagIfNeeded();
 
