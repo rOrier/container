@@ -102,6 +102,7 @@ class ServiceSpec implements ArrayAccess
      * @param mixed $value
      * @throws Exception
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($var, $value)
     {
         $this->data[$var] = $value;
@@ -111,6 +112,7 @@ class ServiceSpec implements ArrayAccess
      * @param mixed $var
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($var)
     {
         return isset($this->data[$var]);
@@ -120,6 +122,7 @@ class ServiceSpec implements ArrayAccess
      * @param mixed $var
      * @throws Exception
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($var)
     {
         unset($this->data[$var]);
@@ -129,6 +132,7 @@ class ServiceSpec implements ArrayAccess
      * @param mixed $var
      * @return array|bool|mixed|null
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($var)
     {
         return $this->data[$var];
