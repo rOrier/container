@@ -147,6 +147,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return array_key_exists($offset, $this->index);
@@ -156,6 +157,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
      * @inheritDoc
      * @throws Exception
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->getService($offset);
@@ -164,6 +166,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         throw new LogicException("Trying to set aggregator $offset with value : '$value'.");
@@ -172,6 +175,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         throw new LogicException("Trying to unset aggregator $offset.");
