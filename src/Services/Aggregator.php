@@ -186,6 +186,10 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
         throw new LogicException("Trying to unset aggregator $offset.");
     }
 
+    /**
+     * @inheritDoc
+     */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->index);
