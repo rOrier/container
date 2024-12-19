@@ -107,6 +107,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
      * @inheritDoc
      * @throws Exception
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->getService($this->key());
@@ -115,6 +116,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function next()
     {
         next($this->index);
@@ -123,6 +125,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return key($this->index);
@@ -131,6 +134,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function valid()
     {
         return key($this->index) !== null;
@@ -139,6 +143,7 @@ class Aggregator implements ConfigurableServiceInterface, ArrayAccess, Iterator,
     /**
      * @inheritDoc
      */
+    #[\ReturnTypeWillChange]
     public function rewind()
     {
         reset($this->index);
