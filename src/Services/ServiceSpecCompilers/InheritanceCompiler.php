@@ -63,6 +63,7 @@ class InheritanceCompiler implements CompilerInterface
             }
 
             $parentRawSpec = $this->analyzer->parse($parentRawSpec);
+            $rawSpec = $this->analyzer->parse($rawSpec);
 
             CollectionTool::merge($parentRawSpec, $rawSpec);
 
