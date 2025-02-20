@@ -36,4 +36,9 @@ interface ContainerInterface extends PSRContainerInterface
      * @return self
      */
     public function reset(): ContainerInterface;
+
+    /**
+     * @inheritDoc
+     */
+    public function has(string $id): bool;
 }

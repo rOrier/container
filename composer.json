@@ -11,7 +11,7 @@
     ],
     "require": {
         "rorier/config": "^0.2",
-        "psr/container": "^2",
+        "psr/container": "*",
         "php": ">= 7.4"
     },
     "autoload": {
